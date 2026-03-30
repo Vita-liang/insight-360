@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Insight 360 - AureliAxis Pharmaceuticals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Global Top Bar -->
+        <header class="top-bar">
+            <div class="app-title">
+                <div class="brand-logo">AureliAxis</div>
+                <div class="app-name">Insight 360</div>
+            </div>
+            <div class="role-scope-switcher" id="roleSwitcher">
+                <div class="chip">
+                    <span class="role-text">MSL</span>
+                    <span class="role-name">- 张医生</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+            </div>
+            <div class="alerts-bell" id="alertsBell">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+                <span class="badge">2</span>
+            </div>
+        </header>
+        
+        <!-- Role Switcher Dropdown -->
+        <div class="role-dropdown" id="roleDropdown">
+            <div class="dropdown-header">选择角色</div>
+            <div class="dropdown-item active" data-role="msl" data-name="张医生">
+                <span class="role-icon">👤</span>
+                <span class="role-info">
+                    <span class="role-title">MSL</span>
+                    <span class="role-desc">医学科学联络官</span>
+                </span>
+            </div>
+            <div class="dropdown-item" data-role="medical-manager" data-name="李经理">
+                <span class="role-icon">🏥</span>
+                <span class="role-info">
+                    <span class="role-title">医学经理</span>
+                    <span class="role-desc">管理MSL团队</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Dashboard -->
+            <section id="home" class="screen active">
+                <!-- Header Chips -->
+                <div class="header-chips">
+                    <div class="chip">本月</div>
+                    <div class="chip">所有品牌</div>
+                </div>
+
+                <!-- KPI Strip -->
+                <div class="kpi-strip">
+                    <div class="kpi-card">
+                        <div class="kpi-value">12</div>
+                        <div class="kpi-label">洞见总数</div>
+                        <div class="kpi-spark">
+                            <svg width="60" height="20" viewBox="0 0 60 20">
+                                <path d="M0,15 L10,12 L20,14 L30,8 L40,10 L50,6 L60,9" fill="none" stroke="#4DA3D9" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <div class="info-icon">i</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value">4</div>
+                        <div class="kpi-label">高价值洞见</div>
+                        <div class="kpi-spark">
+                            <svg width="60" height="20" viewBox="0 0 60 20">
+                                <path d="M0,10 L10,8 L20,12 L30,9 L40,14 L50,11 L60,13" fill="none" stroke="#4DA3D9" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <div class="info-icon">i</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value">75%</div>
+                        <div class="kpi-label">转化率</div>
+                        <div class="kpi-spark">
+                            <svg width="60" height="20" viewBox="0 0 60 20">
+                                <path d="M0,8 L10,10 L20,7 L30,12 L40,9 L50,14 L60,12" fill="none" stroke="#4DA3D9" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <div class="info-icon">i</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value">90%</div>
+                        <div class="kpi-label">共享率</div>
+                        <div class="kpi-spark">
+                            <svg width="60" height="20" viewBox="0 0 60 20">
+                                <path d="M0,12 L10,9 L20,13 L30,10 L40,15 L50,12 L60,14" fill="none" stroke="#4DA3D9" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <div class="info-icon">i</div>
+                    </div>
+                </div>
+
+                <!-- Recent Insights -->
+                <div class="section-title">最近洞见</div>
+                <div class="insight-tiles">
+                    <div class="insight-tile" data-insight-id="1">
+                        <div class="tile-header">
+                            <div class="tile-avatar">王教授</div>
+                            <div class="tile-info">
+                                <div class="tile-name">王教授</div>
+                                <div class="tile-hospital">北京协和医院</div>
+                            </div>
+                            <div class="tile-date">2026-03-28</div>
+                        </div>
+                        <div class="tile-content">
+                            <div class="insight-title">关于AureliMab™在复发难治性骨髓瘤中的应用</div>
+                            <div class="insight-summary">王教授认为当前治疗方案中，AureliMab™的用药频率可能影响患者依从性，建议优化给药方案。</div>
+                        </div>
+                        <div class="tile-footer">
+                            <div class="insight-tag">临床实践</div>
+                            <div class="insight-status green">已跟进</div>
+                        </div>
+                    </div>
+                    <div class="insight-tile" data-insight-id="2">
+                        <div class="tile-header">
+                            <div class="tile-avatar">李主任</div>
+                            <div class="tile-info">
+                                <div class="tile-name">李主任</div>
+                                <div class="tile-hospital">上海瑞金医院</div>
+                            </div>
+                            <div class="tile-date">2026-03-25</div>
+                        </div>
+                        <div class="tile-content">
+                            <div class="insight-title">LymphoAxis™与免疫检查点抑制剂联合使用</div>
+                            <div class="insight-summary">李主任分享了LymphoAxis™与PD-1抑制剂联合治疗霍奇金淋巴瘤的初步临床经验，效果显著。</div>
+                        </div>
+                        <div class="tile-footer">
+                            <div class="insight-tag">联合治疗</div>
+                            <div class="insight-status yellow">处理中</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="action-button" id="addInsightBtn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 5v10"></path>
+                            <path d="M5 10h10"></path>
+                        </svg>
+                        <span>新建洞见</span>
+                    </button>
+                    <button class="action-button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>导出报告</span>
+                    </button>
+                    <button class="action-button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="10" cy="10" r="3"></circle>
+                            <path d="M10 2v2"></path>
+                            <path d="M10 16v2"></path>
+                            <path d="M2 10h2"></path>
+                            <path d="M16 10h2"></path>
+                            <path d="M4.93 4.93l1.41 1.41"></path>
+                            <path d="M13.66 13.66l1.41 1.41"></path>
+                            <path d="M4.93 15.07l1.41-1.41"></path>
+                            <path d="M13.66 6.34l1.41-1.41"></path>
+                        </svg>
+                        <span>KOL拜访</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Insights List -->
+            <section id="insights" class="screen">
+                <div class="section-title">洞见列表</div>
+                <div class="filter-chips">
+                    <div class="filter-chip active">全部</div>
+                    <div class="filter-chip">临床实践</div>
+                    <div class="filter-chip">市场竞争</div>
+                    <div class="filter-chip">学术趋势</div>
+                </div>
+                <div class="insight-list">
+                    <div class="insight-item" data-insight-id="1">
+                        <div class="item-header">
+                            <div class="item-avatar">王教授</div>
+                            <div class="item-info">
+                                <div class="item-name">王教授</div>
+                                <div class="item-hospital">北京协和医院</div>
+                            </div>
+                            <div class="item-date">2026-03-28</div>
+                        </div>
+                        <div class="item-content">
+                            <div class="insight-title">关于AureliMab™在复发难治性骨髓瘤中的应用</div>
+                            <div class="insight-summary">王教授认为当前治疗方案中，AureliMab™的用药频率可能影响患者依从性，建议优化给药方案。</div>
+                        </div>
+                        <div class="item-footer">
+                            <div class="insight-tag">临床实践</div>
+                            <div class="insight-status green">已跟进</div>
+                        </div>
+                    </div>
+                    <div class="insight-item" data-insight-id="2">
+                        <div class="item-header">
+                            <div class="item-avatar">李主任</div>
+                            <div class="item-info">
+                                <div class="item-name">李主任</div>
+                                <div class="item-hospital">上海瑞金医院</div>
+                            </div>
+                            <div class="item-date">2026-03-25</div>
+                        </div>
+                        <div class="item-content">
+                            <div class="insight-title">LymphoAxis™与免疫检查点抑制剂联合使用</div>
+                            <div class="insight-summary">李主任分享了LymphoAxis™与PD-1抑制剂联合治疗霍奇金淋巴瘤的初步临床经验，效果显著。</div>
+                        </div>
+                        <div class="item-footer">
+                            <div class="insight-tag">联合治疗</div>
+                            <div class="insight-status yellow">处理中</div>
+                        </div>
+                    </div>
+                    <div class="insight-item" data-insight-id="3">
+                        <div class="item-header">
+                            <div class="item-avatar">张教授</div>
+                            <div class="item-info">
+                                <div class="item-name">张教授</div>
+                                <div class="item-hospital">广州中山医院</div>
+                            </div>
+                            <div class="item-date">2026-03-20</div>
+                        </div>
+                        <div class="item-content">
+                            <div class="insight-title">CardioAureli™在高胆固醇血症中的应用</div>
+                            <div class="insight-summary">张教授建议在指南更新中增加CardioAureli™作为高风险患者的一线治疗选择。</div>
+                        </div>
+                        <div class="item-footer">
+                            <div class="insight-tag">指南更新</div>
+                            <div class="insight-status red">待处理</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KPI Analysis -->
+            <section id="kpi" class="screen">
+                <div class="section-title">KPI分析</div>
+                <div class="filters">
+                    <div class="filter-chip active" data-period="Q1">2026年第一季度</div>
+                    <div class="filter-chip" data-period="Q2">2026年第二季度</div>
+                    <div class="filter-chip" data-period="Q3">2026年第三季度</div>
+                    <div class="filter-chip" data-period="Q4">2026年第四季度</div>
+                </div>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="personal">个人</button>
+                    <button class="view-btn" data-view="team">团队</button>
+                </div>
+                <div class="trend-card">
+                    <div class="card-title">洞见数量趋势</div>
+                    <div class="chart-container">
+                        <svg width="350" height="200" viewBox="0 0 350 200">
+                            <line x1="0" y1="150" x2="350" y2="150" stroke="#E6ECF2" stroke-width="1"></line>
+                            <line x1="0" y1="100" x2="350" y2="100" stroke="#E6ECF2" stroke-width="1"></line>
+                            <line x1="0" y1="50" x2="350" y2="50" stroke="#E6ECF2" stroke-width="1"></line>
+                            <path d="M0,120 L50,110 L100,130 L150,90 L200,100 L250,80 L300,95 L350,85" fill="none" stroke="#1B6CA8" stroke-width="2"></path>
+                            <path d="M0,100 L50,95 L100,110 L150,80 L200,85 L250,70 L300,80 L350,75" fill="none" stroke="#4DA3D9" stroke-width="2" stroke-dasharray="5,5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="trend-card">
+                    <div class="card-title">洞见质量分布</div>
+                    <div class="chart-container">
+                        <svg width="350" height="200" viewBox="0 0 350 200">
+                            <rect x="50" y="100" width="40" height="50" fill="#1B6CA8"></rect>
+                            <rect x="120" y="80" width="40" height="70" fill="#4DA3D9"></rect>
+                            <rect x="190" y="120" width="40" height="30" fill="#0EB77A"></rect>
+                            <rect x="260" y="90" width="40" height="60" fill="#FF7D00"></rect>
+                        </svg>
+                    </div>
+                </div>
+                <div class="kpi-categories">
+                    <div class="kpi-category">
+                        <h4>科学传播与教育</h4>
+                        <div class="data-table">
+                            <div class="table-header">
+                                <div class="table-cell">指标</div>
+                                <div class="table-cell">目标</div>
+                                <div class="table-cell">实际</div>
+                                <div class="table-cell">达成率</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">外部学术报告次数</div>
+                                <div class="table-cell">4次/年</div>
+                                <div class="table-cell">6次</div>
+                                <div class="table-cell">150%</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">内部培训次数</div>
+                                <div class="table-cell">4次/年</div>
+                                <div class="table-cell">5次</div>
+                                <div class="table-cell">125%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-category">
+                        <h4>临床证据支持</h4>
+                        <div class="data-table">
+                            <div class="table-header">
+                                <div class="table-cell">指标</div>
+                                <div class="table-cell">目标</div>
+                                <div class="table-cell">实际</div>
+                                <div class="table-cell">达成率</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">参与研究项目数量</div>
+                                <div class="table-cell">1个/年</div>
+                                <div class="table-cell">3个</div>
+                                <div class="table-cell">300%</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">患者招募人数</div>
+                                <div class="table-cell">20人/年</div>
+                                <div class="table-cell">25人</div>
+                                <div class="table-cell">125%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-category">
+                        <h4>KOL关系维护</h4>
+                        <div class="data-table">
+                            <div class="table-header">
+                                <div class="table-cell">指标</div>
+                                <div class="table-cell">目标</div>
+                                <div class="table-cell">实际</div>
+                                <div class="table-cell">达成率</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">核心KOL数量</div>
+                                <div class="table-cell">35-45位</div>
+                                <div class="table-cell">42位</div>
+                                <div class="table-cell">100%</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">KOL拜访频次</div>
+                                <div class="table-cell">4次/年/位</div>
+                                <div class="table-cell">5次/年/位</div>
+                                <div class="table-cell">125%</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">关系质量评分</div>
+                                <div class="table-cell">≥4/5</div>
+                                <div class="table-cell">4.5/5</div>
+                                <div class="table-cell">112.5%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-category">
+                        <h4>市场情报与洞察</h4>
+                        <div class="data-table">
+                            <div class="table-header">
+                                <div class="table-cell">指标</div>
+                                <div class="table-cell">目标</div>
+                                <div class="table-cell">实际</div>
+                                <div class="table-cell">达成率</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">洞察报告数</div>
+                                <div class="table-cell">-</div>
+                                <div class="table-cell">12条</div>
+                                <div class="table-cell">-</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">洞察行动转化率</div>
+                                <div class="table-cell">≥50%</div>
+                                <div class="table-cell">75%</div>
+                                <div class="table-cell">150%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-category">
+                        <h4>合规与风险管理</h4>
+                        <div class="data-table">
+                            <div class="table-header">
+                                <div class="table-cell">指标</div>
+                                <div class="table-cell">目标</div>
+                                <div class="table-cell">实际</div>
+                                <div class="table-cell">达成率</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">合规培训完成率</div>
+                                <div class="table-cell">100%</div>
+                                <div class="table-cell">100%</div>
+                                <div class="table-cell">100%</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">交流记录完整率</div>
+                                <div class="table-cell">100%</div>
+                                <div class="table-cell">100%</div>
+                                <div class="table-cell">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KOL Management -->
+            <section id="kol" class="screen">
+                <div class="section-title">KOL管理</div>
+                <div class="filter-chips">
+                    <div class="filter-chip active">全部</div>
+                    <div class="filter-chip">国家级</div>
+                    <div class="filter-chip">省级</div>
+                    <div class="filter-chip">地区级</div>
+                </div>
+                <div class="kol-list">
+                    <div class="kol-item">
+                        <div class="kol-avatar">王教授</div>
+                        <div class="kol-info">
+                            <div class="kol-name">王教授</div>
+                            <div class="kol-hospital">北京协和医院</div>
+                            <div class="kol-specialty">血液科</div>
+                        </div>
+                        <div class="kol-level">国家级</div>
+                    </div>
+                    <div class="kol-item">
+                        <div class="kol-avatar">李主任</div>
+                        <div class="kol-info">
+                            <div class="kol-name">李主任</div>
+                            <div class="kol-hospital">上海瑞金医院</div>
+                            <div class="kol-specialty">血液科</div>
+                        </div>
+                        <div class="kol-level">国家级</div>
+                    </div>
+                    <div class="kol-item">
+                        <div class="kol-avatar">张教授</div>
+                        <div class="kol-info">
+                            <div class="kol-name">张教授</div>
+                            <div class="kol-hospital">广州中山医院</div>
+                            <div class="kol-specialty">心血管科</div>
+                        </div>
+                        <div class="kol-level">省级</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add Insight Modal -->
+            <div class="modal" id="addInsightModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>新建洞见</h3>
+                        <button class="close-button" id="closeModalBtn">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="insightForm">
+                            <div class="form-group">
+                                <label>KOL姓名</label>
+                                <input type="text" id="kolName" placeholder="请输入KOL姓名">
+                            </div>
+                            <div class="form-group">
+                                <label>医院</label>
+                                <input type="text" id="hospital" placeholder="请输入医院名称">
+                            </div>
+                            <div class="form-group">
+                                <label>洞见标题</label>
+                                <input type="text" id="insightTitle" placeholder="请输入洞见标题">
+                            </div>
+                            <div class="form-group">
+                                <label>洞见内容</label>
+                                <textarea id="insightContent" placeholder="请输入洞见详细内容"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>洞见类型</label>
+                                <select id="insightType">
+                                    <option value="clinical">临床实践</option>
+                                    <option value="market">市场竞争</option>
+                                    <option value="academic">学术趋势</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>GRIT分析</label>
+                                <div class="grit-section">
+                                    <div class="grit-item">
+                                        <label>G (目标)</label>
+                                        <textarea id="gritGoal" placeholder="关联的战略目标"></textarea>
+                                    </div>
+                                    <div class="grit-item">
+                                        <label>R (总结)</label>
+                                        <textarea id="gritReview" placeholder="执行情况和数据支持"></textarea>
+                                    </div>
+                                    <div class="grit-item">
+                                        <label>I (启示)</label>
+                                        <textarea id="gritInsight" placeholder="战略价值洞察"></textarea>
+                                    </div>
+                                    <div class="grit-item">
+                                        <label>T (跟进)</label>
+                                        <textarea id="gritTrack" placeholder="行动计划和跟进状态"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-button">提交洞见</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insight Detail Modal -->
+            <div class="modal" id="insightDetailModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>洞见详情</h3>
+                        <button class="close-button" id="closeDetailModalBtn">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="detail-section">
+                            <h4>基本信息</h4>
+                            <div class="detail-item">
+                                <span class="label">KOL姓名：</span>
+                                <span class="value" id="detailKolName">王教授</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">医院：</span>
+                                <span class="value" id="detailHospital">北京协和医院</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">日期：</span>
+                                <span class="value" id="detailDate">2026-03-28</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">类型：</span>
+                                <span class="value" id="detailType">临床实践</span>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <h4>洞见内容</h4>
+                            <div class="detail-content" id="detailContent">
+                                王教授认为当前治疗方案中，AureliMab™的用药频率可能影响患者依从性，建议优化给药方案。具体来说，当前的每周两次给药方案对于部分老年患者来说负担较重，可能导致漏药情况发生。
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <h4>GRIT分析</h4>
+                            <div class="grit-detail">
+                                <div class="grit-detail-item">
+                                    <h5>G (目标)</h5>
+                                    <p id="detailGritGoal">优化AureliMab™的给药方案，提高患者依从性，从而提升治疗效果。</p>
+                                </div>
+                                <div class="grit-detail-item">
+                                    <h5>R (总结)</h5>
+                                    <p id="detailGritReview">通过与王教授的交流，发现当前每周两次的给药方案在临床实践中存在依从性问题，特别是对于老年患者群体。</p>
+                                </div>
+                                <div class="grit-detail-item">
+                                    <h5>I (启示)</h5>
+                                    <p id="detailGritInsight">给药频率是影响患者依从性的重要因素，优化给药方案可能显著提升治疗效果和患者满意度。</p>
+                                </div>
+                                <div class="grit-detail-item">
+                                    <h5>T (跟进)</h5>
+                                    <p id="detailGritTrack">1. 与研发部门沟通，评估调整给药方案的可行性；2. 设计相关临床研究验证新方案的有效性；3. 更新产品说明书和患者教育材料。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <h4>跟进状态</h4>
+                            <div class="status-section">
+                                <div class="status-item">
+                                    <span class="status-label">当前状态：</span>
+                                    <span class="status-value green" id="detailStatus">已跟进</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">负责部门：</span>
+                                    <span class="status-value" id="detailDepartment">医学部、研发部</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">截止日期：</span>
+                                    <span class="status-value" id="detailDeadline">2026-04-15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn">编辑洞见</button>
+                            <button class="action-btn">分享洞见</button>
+                            <button class="action-btn">更新状态</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-target="home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>首页</span>
+            </button>
+            <button class="nav-item" data-target="insights">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>洞见</span>
+            </button>
+            <button class="nav-item" data-target="kpi">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 20V10"></path>
+                    <path d="M12 20V4"></path>
+                    <path d="M6 20v-6"></path>
+                </svg>
+                <span>KPI</span>
+            </button>
+            <button class="nav-item" data-target="kol">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>KOL</span>
+            </button>
+        </nav>
+
+        <!-- Floating Action Button -->
+        <button class="fab" id="fab">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14"></path>
+                <path d="M5 12h14"></path>
+            </svg>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
